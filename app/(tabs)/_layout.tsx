@@ -1,35 +1,51 @@
-import { Tabs } from 'expo-router';
-import React from 'react';
+import {Tabs} from "expo-router";
+import { MaterialCommunityIcons, Entypo, Feather } from "@expo/vector-icons";
 
-import { HapticTab } from '@/components/haptic-tab';
-import { IconSymbol } from '@/components/ui/icon-symbol';
-import { Colors } from '@/constants/theme';
-import { useColorScheme } from '@/hooks/use-color-scheme';
-
-export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
+export default function Layout() {
   return (
-    <Tabs
-      screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        headerShown: false,
-        tabBarButton: HapticTab,
-      }}>
+    <Tabs screenOptions={{ headerShown: false }}>
       <Tabs.Screen
-        name="index"
+        name="status"
         options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          tabBarLabel: "Status",
+          tabBarIcon: () => (
+            <Entypo name="circle" size={24} color="black" />),
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="calls"
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          tabBarLabel: "Calls",
+          tabBarIcon: () => (
+            <MaterialCommunityIcons name="phone" size={24} color="black" />),
         }}
       />
+      <Tabs.Screen
+        name="community"
+        options={{
+          tabBarLabel: "Community",
+          tabBarIcon: () => (
+            <Entypo name="users" size={24} color="black" />),
+        }}
+      />
+      <Tabs.Screen
+        name="chat"
+        options={{
+          tabBarLabel: "Chat",
+          tabBarIcon: () => (
+            <Entypo name="chat" size={24} color="black" />),
+        }}
+      />
+      <Tabs.Screen
+        name="settings"
+        options={{
+          tabBarLabel: "Settings",
+          tabBarIcon: () => (
+            <Feather name="settings" size={24} color="black" />
+          ),
+        }}
+      />
+
     </Tabs>
   );
 }
