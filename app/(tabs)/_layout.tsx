@@ -5,16 +5,6 @@ export default function TabLayout() {
   return (
     <Tabs screenOptions={{ headerShown: false }}>
       <Tabs.Screen
-        name="index"
-        options={{
-          title: "Chats",
-          tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="chat" size={size} color={color} />
-          ),
-        }}
-      />
-
-      <Tabs.Screen
         name="status"
         options={{
           title: "Status",
@@ -30,6 +20,25 @@ export default function TabLayout() {
           title: "Calls",
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons name="phone" size={size} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="community"
+        options={{
+          title: "Community",
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="account-group" size={size} color={color} />
+          ),
+        }}
+      />
+      
+      <Tabs.Screen
+        name="index"
+        options={{
+          title: "Chats",
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="chat" size={size} color={color} />
           ),
         }}
       />

@@ -3,13 +3,13 @@ import { View, Text, FlatList, StyleSheet, Image } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 const calls = [
-  { id: "1", name: "Contact A", type: "Outgoing", time: "11:00 AM" },
-  { id: "2", name: "Contact A", type: "Incoming", time: "1:15 AM" },
-  { id: "3", name: "Contact A", type: "Missed", time: "1:01 AM" },
-  { id: "4", name: "Contact B", type: "Outgoing", time: "Yesterday" },
-  { id: "5", name: "Contact E", type: "Incoming", time: "Yesterday" },
-  { id: "6", name: "Contact D", type: "Missed", time: "2 days ago" },
-  { id: "7", name: "Contact F", type: "Outgoing", time: "2 days ago" },
+  { id: "1", name: "Mom", type: "Outgoing", time: "11:00 PM" },
+  { id: "2", name: "Papa", type: "Incoming", time: "1:15 AM" },
+  { id: "3", name: "Rishav", type: "Missed", time: "1:01 AM" },
+  { id: "4", name: "Franklin", type: "Outgoing", time: "Yesterday" },
+  { id: "5", name: "Micheal", type: "Incoming", time: "Yesterday" },
+  { id: "6", name: "Work", type: "Missed", time: "2 days ago" },
+  { id: "7", name: "Bhupinder", type: "Outgoing", time: "2 days ago" },
 
 ];
 
