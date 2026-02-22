@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, FlatList, StyleSheet, Image, ScrollView } from "react-native";
+import { View, Text, FlatList, StyleSheet, Image } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 const calls = [
@@ -62,7 +62,7 @@ export default function CallsScreen() {
 
       <Text style={styles.sectionTitle}>Recent</Text>
 
-      <ScrollView>
+      
       
       <FlatList
         data={calls}
@@ -108,7 +108,7 @@ export default function CallsScreen() {
           </View>
         )}
         />
-        </ScrollView>
+  
     </View>
   );
 }
