@@ -1,51 +1,58 @@
-import {Tabs} from "expo-router";
-import { MaterialCommunityIcons, Entypo, Feather } from "@expo/vector-icons";
 
-export default function Layout() {
+import { Tabs } from "expo-router";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+
+export default function TabLayout() {
   return (
     <Tabs screenOptions={{ headerShown: false }}>
       <Tabs.Screen
         name="status"
         options={{
-          tabBarLabel: "Status",
-          tabBarIcon: () => (
-            <Entypo name="circle" size={24} color="black" />),
+          title: "Status",
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="circle-outline" size={size} color={color} />
+          ),
         }}
       />
+
       <Tabs.Screen
         name="calls"
         options={{
-          tabBarLabel: "Calls",
-          tabBarIcon: () => (
-            <MaterialCommunityIcons name="phone" size={24} color="black" />),
+          title: "Calls",
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="phone" size={size} color={color} />
+          ),
         }}
       />
       <Tabs.Screen
         name="community"
         options={{
-          tabBarLabel: "Community",
-          tabBarIcon: () => (
-            <Entypo name="users" size={24} color="black" />),
+          title: "Community",
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="account-group" size={size} color={color} />
+          ),
         }}
       />
+      
       <Tabs.Screen
-        name="chat"
+        name="index"
         options={{
-          tabBarLabel: "Chat",
-          tabBarIcon: () => (
-            <Entypo name="chat" size={24} color="black" />),
-        }}
-      />
-      <Tabs.Screen
-        name="settings"
-        options={{
-          tabBarLabel: "Settings",
-          tabBarIcon: () => (
-            <Feather name="settings" size={24} color="black" />
+          title: "Chats",
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="chat" size={size} color={color} />
           ),
         }}
       />
 
+      <Tabs.Screen
+        name="settings"
+        options={{
+          title: "Settings",
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="cog" size={size} color={color} />
+          ),
+        }}
+      />
     </Tabs>
   );
 }
